@@ -1,0 +1,32 @@
+{
+  "name": "mooxe-docker-java8",
+  "version": "0.0.0",
+  "description": "docker image for java8 application of mooxe",
+  "author": "FooTearth <footearth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mooxe000/mooxe-docker-java8.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mooxe000/mooxe-docker-java8/issues"
+  },
+  "homepage": "https://github.com/Mooxe000/mooxe-docker-java8",
+  "Keywords": [
+    "docker",
+    "daocloud",
+    "image"
+  ],
+  "bin": {},
+  "scripts": {
+    "build": "docker build -t mooxe/java8 .",
+    "rebuild": "docker build --no-cache=true -t mooxe/java8 .",
+    "in": "docker run -name=mooxe_java8 -t -i mooxe/java8 /bin/bash",
+    "push": "docker push mooxe/java8",
+    "test": "echo 'hello'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "shelljs": "^0.4.0"
+  }
+}
