@@ -21,7 +21,7 @@
   "scripts": {
     "build": "docker build -t mooxe/java8 .",
     "rebuild": "docker build --no-cache=true -t mooxe/java8 .",
-    "in": "docker run -name=mooxe_java8 -t -i mooxe/java8 /bin/bash",
+    "in": "docker run --name=mooxe_java8 -t -i mooxe/java8 /bin/bash",
     "push": "docker push mooxe/java8",
     "test": "echo 'hello'"
   },
