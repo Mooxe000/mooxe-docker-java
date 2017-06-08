@@ -1,4 +1,4 @@
-FROM mooxe/base:latest
+FROM mooxe/sdkman
 
 MAINTAINER FooTearth "footearth@gmail.com"
 
@@ -17,9 +17,7 @@ RUN add-apt-repository ppa:webupd8team/java -y
 # system update
 RUN \
   apt-get update && \
-  apt-get update && \
-  apt-get upgrade -y && \
-  apt-get autoremove
+  apt-get -y upgrade
 
 # install java
 RUN \
@@ -28,3 +26,7 @@ RUN \
   echo debconf shared/accepted-oracle-license-v1-1 seen true | \
     debconf-set-selections && \
   apt-get install oracle-java8-installer -y
+
+RUN \
+  apt-get autoremove -y && \
+  apt-get clean
